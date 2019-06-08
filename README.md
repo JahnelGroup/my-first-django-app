@@ -1,4 +1,4 @@
-# First Django Project
+# My First Django Project
 
 Please watch this excellent video by Justin Mitchel: [Python Django Web Framework - Full Course for Beginners](https://www.youtube.com/watch?v=F5mRW0jo-U4).
 
