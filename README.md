@@ -1,6 +1,6 @@
 # First Django Project
 
-Please watch this excellent video by Justin Mitchel: [Python Django Web Framework - Full Course for Beginners](https://www.youtube.com/watch?v=F5mRW0jo-U4).
+Django has great documentation and a guide to [getting started](https://docs.djangoproject.com/en/2.2/intro/) with your first app. You can also watch this excellent video by Justin Mitchel: [Python Django Web Framework - Full Course for Beginners](https://www.youtube.com/watch?v=F5mRW0jo-U4).
 
 ## Setup Python and Django
 
@@ -116,3 +116,7 @@ Superuser created successfully.
 ```
 
 Have your server running then navigate to http://localhost:8000/admin to and login with your super user account.
+
+## Create a 'TODO' App
+
+Use manage.py with the [createsuperuser](https://docs.djangoproject.com/en/2.2/ref/django-admin/#createsuperuser) switch to create your super user account.
