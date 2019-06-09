@@ -119,4 +119,56 @@ Have your server running then navigate to http://localhost:8000/admin to and log
 
 ## Create a 'TODO' App
 
-Use manage.py with the [createsuperuser](https://docs.djangoproject.com/en/2.2/ref/django-admin/#createsuperuser) switch to create your super user account.
+Use manage.py with the [startapp](https://docs.djangoproject.com/en/2.2/ref/django-admin/#startapp) switch to create the seed of [src/todo](./src/todo):
+
+```bash
+$ cd src
+$ python manage.py startapp todo
+```
+
+Now create the Todo models, views and register it with the admin. 
+
+* Update [src/todo/models.py](./src/todo/models.py) with TODO models.
+* Update [src/todo/views.py](./src/todo/views.py) with controller functions.
+* Update [src/todo/admin.py](./src/todo/admin.py) to register admin functionality from /admin.
+
+Integrate the Todo app with Django:
+
+* Update [src/app/settings.py](./src/app/settings.py) to add TodoConfig to INSTALLED_APPS. 
+* Create [src/todo/urls.py](./src/todo/urls.py) then add routes to the controller.
+* Update [src/app/urls.py](./src/app/urls.py) to include the todo urls.
+
+Create migrations for the Todo model and run them:
+
+```bash
+$ python src/manage.py makemigrations
+Migrations for 'todo':
+  todo/migrations/0001_initial.py
+    - Create model Todo
+$ python src/manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions, todo
+Running migrations:
+  Applying todo.0001_initial... OK
+```
+
+Now you can login to the admin and perform CRUD operations on Todo's. 
+
+### Django Python Shell
+
+Django's python shell is another option to manage your application, launch it with `python src/manage.py shell`.
+
+```bash
+$ python manage.py shell
+Python 3.7.3 (default, Jun  5 2019, 21:07:12) 
+[GCC 8.3.1 20190223 (Red Hat 8.3.1-2)] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+(InteractiveConsole)
+>>> from todo.models import Todo
+>>> Todo.objects.all()
+<QuerySet [<Todo: Todo object (1)>]>
+>>> Todo.objects.create(title='Title 2', description='Description 2')
+<Todo: Todo object (2)>
+>>> Todo.objects.all()
+<QuerySet [<Todo: Todo object (1)>, <Todo: Todo object (2)>]>
+```
