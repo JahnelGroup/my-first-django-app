@@ -1,4 +1,4 @@
-# First Django Project
+# My First Django App
 
 Django has great documentation and a guide to [getting started](https://docs.djangoproject.com/en/2.2/intro/) with your first app. You can also watch this excellent video by Justin Mitchel: [Python Django Web Framework - Full Course for Beginners](https://www.youtube.com/watch?v=F5mRW0jo-U4).
 
@@ -6,7 +6,7 @@ Django has great documentation and a guide to [getting started](https://docs.dja
 
 Follow this guide on [managing multiple python versions](https://realpython.com/intro-to-pyenv/) to install [pyenv](https://github.com/pyenv/pyenv#installation). Once you have *pyenv* installed you can install any version of python and create virtual environments.
 
-Install *Python 3.7.3*, configure a virtual environment, active it with the local command, upgrade pip, and then install *Django 2.2.2*.
+Install **Python 3.7.3**, configure a virtual environment, active it with the local command, upgrade pip, and then install **Django 2.2.2**.
 
 ```bash
 $ pyenv install -v 3.7.3
@@ -27,7 +27,7 @@ pytz==2019.1
 sqlparse==0.3.0
 ```
 
-## Initial Project and Run Server
+## Intialize the Project and Run Server
 
 Use the [django-admin](https://docs.djangoproject.com/en/2.2/ref/django-admin/#django-admin-and-manage-py) command with the [startproject](https://docs.djangoproject.com/en/2.2/ref/django-admin/#startproject) switch to initialize your Django project.
 
