@@ -11,7 +11,7 @@ Install **Python 3.7.3**, configure a virtual environment, active it with the lo
 ```bash
 $ pyenv install -v 3.7.3
 $ pyenv virtualenv 3.7.3 my-first-django-app
-$ pyenv local django-starter
+$ pyenv local my-first-django-app
 (my-first-django-app) [my-first-django-app]$ python -V
 Python 3.7.3
 (my-first-django-app) [my-first-django-app]$ pip install --upgrade pip
