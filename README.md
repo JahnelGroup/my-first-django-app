@@ -126,17 +126,27 @@ $ cd src
 $ python manage.py startapp todo
 ```
 
-Now create the Todo models, views and register it with the admin. 
+### Views, Model and Admin
+
+Create the Todo model, views and register it with the admin app.
 
 * Update [src/todo/models.py](./src/todo/models.py) with TODO models.
 * Update [src/todo/views.py](./src/todo/views.py) with controller functions.
 * Update [src/todo/admin.py](./src/todo/admin.py) to register admin functionality from /admin.
+
+### Register Todo App with Django
 
 Integrate the Todo app with Django:
 
 * Update [src/app/settings.py](./src/app/settings.py) to add TodoConfig to INSTALLED_APPS. 
 * Create [src/todo/urls.py](./src/todo/urls.py) then add routes to the controller.
 * Update [src/app/urls.py](./src/app/urls.py) to include the todo urls.
+
+### Django Templates
+
+Create Django [templates](./src/todo/templates) to display your Todo model.
+
+### Database Migrations
 
 Create migrations for the Todo model and run them:
 
@@ -152,7 +162,7 @@ Running migrations:
   Applying todo.0001_initial... OK
 ```
 
-Now you can login to the admin and perform CRUD operations on Todo's. 
+Now you can login to the [admin](http://localhost:8000/admin) and perform CRUD operations on Todo's. 
 
 ### Django Python Shell
 

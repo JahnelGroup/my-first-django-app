@@ -1,0 +1,22 @@
+{% if request.GET.edit %}
+    <input name="title" />
+    <input name="description" />
+
+    <ul>
+        <li><a href="/todo">Back</a></li>
+        <li><a href="/todo?edit=true">Edit</a></li>
+        <li><a href="/todo">Delete</a></li>
+    </ul>    
+{% else %}
+    <h1>{{ todo.title }}</h1>
+    <p>{{ todo.description }}</p>
+
+    <ul>
+        <li><a href="/todo">Back</a></li>
+        <li><a href="/todo?edit=true">Edit</a></li>
+        <li><a href="/todo">Delete</a></li>
+    </ul>    
+{% endif %}
+
+
+
