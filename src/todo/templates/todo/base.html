@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en" class="h-100">
+{% include "todo/head.html" %}
+<body class="d-flex flex-column h-100">
+
+<!-- Begin page content -->
+<main role="main" class="flex-shrink-0">
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+</main>
+
+<footer class="footer mt-auto py-3">
+    <div class="container">
+        <span class="text-muted">Jahnel Group</span>
+    </div>
+</footer>
+</body>
+</html>

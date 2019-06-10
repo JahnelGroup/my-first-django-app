@@ -27,7 +27,7 @@ pytz==2019.1
 sqlparse==0.3.0
 ```
 
-## Intialize the Project and Run Server
+## Initialize the Project and Run Server
 
 Use the [django-admin](https://docs.djangoproject.com/en/2.2/ref/django-admin/#django-admin-and-manage-py) command with the [startproject](https://docs.djangoproject.com/en/2.2/ref/django-admin/#startproject) switch to initialize your Django project.
 
@@ -134,7 +134,7 @@ Create the Todo model, views and register it with the admin app.
 * Update [src/todo/views.py](./src/todo/views.py) with controller functions.
 * Update [src/todo/admin.py](./src/todo/admin.py) to register admin functionality from /admin.
 
-### Register Todo App with Django
+### Activate Todo App in Django
 
 Integrate the Todo app with Django:
 

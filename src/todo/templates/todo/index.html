@@ -1,9 +1,20 @@
-{% if todo_list %}
-    <ul>
-    {% for todo in todo_list %}
-        <li><a href="/todo/{{ todo.id }}/">{{ todo.title }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>You have on todo's.</p>
-{% endif %}
+{% extends "todo/base.html" %}
+
+{% block content %}
+    <h1 class="mt-5">Django Todo's</h1>
+    <div>
+        {% if todo_list %}
+            <ul>
+                {% for todo in todo_list %}
+                    <li><a href="{% url 'todo:detail' todo.id %}">{{ todo.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>You have no todo's.</p>
+        {% endif %}
+    </div>
+{#    <div>#}
+{#        <a class="btn btn-primary" href="{% url 'todo:detail'%}" role="button">Add Todo</a>#}
+{#    </div>#}
+
+{% endblock %}
